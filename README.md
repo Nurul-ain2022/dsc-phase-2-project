@@ -1,66 +1,75 @@
-# Phase 2 Project
+# King County  Housing Market Trends
 
-Another module down--you're almost half way there!
+##### Author : Nurulain Abdi
 
-![awesome](https://raw.githubusercontent.com/learn-co-curriculum/dsc-phase-2-project-campus/master/halfway-there.gif)
+## Overview
 
-All that remains in Phase 2 is to put our newfound data science skills to use with a large project! This project should take 20 to 30 hours to complete.
+The kc_house_data is a dataset containing information about houses sold in the King County area of Washington state. 
+The data includes various features of the houses, such as the number of bedrooms and bathrooms, the square footage, and the sale price.
 
-## Project Overview
 
-For this project, you will use regression modeling to analyze house sales in a northwestern county.
+## Business Problem
 
-### The Data
+We want to use the data to build a predictive model that could help real estate agents and developers estimate the sale price of a property based on its characteristics.
 
-This project uses the King County House Sales dataset, which can be found in  `kc_house_data.csv` in the data folder in this repo. The description of the column names can be found in `column_names.md` in the same folder. As with most real world data sets, the column names are not perfectly described, so you'll have to do some research or use your best judgment if you have questions about what the data means.
+This dataset could be useful for a variety of business applications, such as real estate market analysis or pricing prediction for new construction. By exploring the relationships between the different features, it may be possible to identify trends or patterns that can be used to inform business decisions. 
 
-It is up to you to decide what data from this dataset to use and how to use it. If you are feeling overwhelmed or behind, we recommend you ignore some or all of the following features:
 
-* date
-* view
-* sqft_above
-* sqft_basement
-* yr_renovated
-* zipcode
-* lat
-* long
-* sqft_living15
-* sqft_lot15
+## Data
 
-### Business Problem
+Data is from kc_house_data.csv
 
-It is up to you to define a stakeholder and business problem appropriate to this dataset.
 
-If you are struggling to define a stakeholder, we recommend you complete a project for a real estate agency that helps homeowners buy and/or sell homes. A business problem you could focus on for this stakeholder is the need to provide advice to homeowners about how home renovations might increase the estimated value of their homes, and by what amount.
+## Methods
 
-## Deliverables
+Regression modeling is used to analyze house sales in a northwestern county.
 
-There are three deliverables for this project:
+I used a regression analysis tool, such as the LinearRegression class in Python's scikit-learn library, to build a model that predicts the sale price of a house based on its features. 
+I then used this model to analyze the house sales data and generate insights such as the average sale price, the factors that most influence sale price, and the overall trend of house prices in the area.
 
-* A **GitHub repository**
-* A **Jupyter Notebook**
-* A **non-technical presentation**
 
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic for instructions on creating and submitting your deliverables. Refer to the rubric associated with this assignment for specifications describing high-quality deliverables.
+## Results
 
-### Key Points
+The most correlated feature is footage of the home.
+![download (1)](https://user-images.githubusercontent.com/116640061/207713921-7231132b-dad9-4e0e-b549-ffd7f374ae39.png)
 
-* **Your deliverables should explicitly address each step of the data science process.** Refer to [the Data Science Process lesson](https://github.com/learn-co-curriculum/dsc-data-science-processes) from Topic 19 for more information about process models you can use.
+Checking for Multicollinearity of Features
 
-* **Your Jupyter Notebook should demonstrate an iterative approach to modeling.** This means that you begin with a basic model, evaluate it, and then provide justification for and proceed to a new model. After you finish refining your models, you should provide 1-3 paragraphs discussing your final model - this should include interpreting at least 3 important parameter estimates or statistics.
+![download (3)](https://user-images.githubusercontent.com/116640061/207714170-dc3f77b8-21cc-405a-a248-c916ff7d5aad.png)
 
-* **Based on the results of your models, your notebook and presentation should discuss at least two features that have strong relationships with housing prices.**
 
-## Getting Started
+I then checked for outliers in the data set 
 
-Start on this project by forking and cloning [this project repository](https://github.com/learn-co-curriculum/dsc-phase-2-project) to get a local copy of the dataset.
+![download (2)](https://user-images.githubusercontent.com/116640061/207714375-2d2e9a2b-9b60-41eb-be91-cfe3992295c0.png)
 
-We recommend structuring your project repository similar to the structure in [the Phase 1 Project Template](https://github.com/learn-co-curriculum/dsc-project-template). You can do this either by creating a new fork of that repository to work in or by building a new repository from scratch that mimics that structure.
+Most of the features have a lot of outliers in this data set
 
-## Project Submission and Review
 
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic to learn how to submit your project and how it will be reviewed. Your project must pass review for you to progress to the next Phase.
 
-## Summary
+## Conclusions
 
-This project will give you a valuable opportunity to develop your data science skills using real-world data. The end-of-phase projects are a critical part of the program because they give you a chance to bring together all the skills you've learned, apply them to realistic projects for a business stakeholder, practice communication skills, and get feedback to help you improve. You've got this!
+- Based on the analysed data and the prediction model built, Our final R-squared:	0.618 indicating that the model is not performing very well, and may be overfitting or underfitting the data.
+
+- The data violates the homoscedasticity assumption, as shown below by the residuals clustering around certain values of the independent variable
+
+![image](https://user-images.githubusercontent.com/116640061/207717232-9901c0d1-870f-4145-abd0-6796f0a5ba8c.png)
+
+## Recommendation
+
+- I would not recommend using an algorithm to review and adjust prices of housing because there are alot of factors to be considered such as preference and affordability which varies from person to person.
+
+
+## Next Steps
+
+- It is possible that the model could be improved by tuning its parameters or using a different model altogether. It is also possible that the data itself is not well-suited to the task at hand, and that no model will be able to achieve good performance on it!
+
+
+## For more information
+
+See the full analysis in the [Jupyter Notebook](https://github.com/Nurul-ain2022/dsc-phase-2-project/blob/main/student.ipynb) or review this [presentation](https://github.com/Nurul-ain2022/dsc-phase-2-project/blob/main/Presentation.pdf). 
+
+[Click here for the descrition of the column names](https://github.com/Nurul-ain2022/dsc-phase-2-project/blob/main/data/column_names.md)
+
+For additional info, contact Nurulain Abdi at Nurulain.maalim@student.moringaschool.com
+
+
