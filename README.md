@@ -48,7 +48,7 @@ Most of the features have a lot of outliers in this data set
 
 ## Conclusions
 
-- Based on the analysed data and the prediction model built, Our final R-squared:	0.618 indicating that the model is not performing very well, and may be overfitting or underfitting the data.
+- Based on the analysed data we got a coefficient of determination of 0.61 indicates that the predictive model explains 61% of the variance in the data. This is a relatively strong relationship, but it also means that there is still room for improvement.
 
 - The data violates the homoscedasticity assumption, as shown below by the residuals clustering around certain values of the independent variable
 
@@ -56,7 +56,7 @@ Most of the features have a lot of outliers in this data set
 
 ## Recommendation
 
-- I would not recommend using an algorithm to review and adjust prices of housing because there are alot of factors to be considered such as preference and affordability which varies from person to person.
+- Based on this, I would recommend further investigation into the factors that influence house prices in the kc_house_data dataset. It would be useful to try different model types and to explore additional factors that might improve the predictive power of the model. Additionally, it may be useful to compare the performance of the model with other existing models for predicting house prices in the area. Overall, the r-squared value of 0.61 indicates that the model is a good starting point, but further work may be necessary to improve its predictive power.
 
 
 ## Next Steps
